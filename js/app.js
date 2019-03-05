@@ -1,4 +1,14 @@
 const clickFunction = () => {
+    computeFunction();
+}
+
+const enterKeyFunction = (event) => {
+    if (event.keyCode == 13) {
+        computeFunction();
+    }
+}
+
+const computeFunction = () => {
     let str = document.getElementById('ipText').value;
     if(str !== ""){
         let num = Number(str);
@@ -56,8 +66,6 @@ const clickFunction = () => {
         else{
             document.getElementById('opText').innerHTML = "Not an Ugly Number";
         }
-
-        // document.getElementById('opText').innerHTML = str;
     }
     else{
         document.getElementById('opText').innerHTML = "Please enter a number";
